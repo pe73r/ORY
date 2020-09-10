@@ -1,0 +1,119 @@
+
+<section class="Section" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="text-with-image-home">
+  <div class="Text_with_image_home">
+    <div class="container-medium">
+      <div class="grid grid--large">
+         <div class="7/12--lap-and-up grid__cell">
+           <div class="Text_with_image_block Block__left">
+             {% if section.settings.img_left != blank %}
+             <img src="{{ section.settings.img_left | img_url:'master' }}" alt="{{ section.settings.img_left.alt }}">
+             {% endif %}
+             <h2 class="u-h2">{{ section.settings.title_left }}</h2>
+             {{ section.settings.content_left }}
+             {% if section.settings.button_left %}
+              <a href="{{ section.settings.url_left }}" class="Button Button--primary">{{ section.settings.button_left }}</a>
+             {% endif %}
+           </div>
+         </div>
+         <div class="5/12--lap-and-up grid__cell">
+           <div class="Text_with_image_block relative">
+             {% if section.settings.img_right != blank %}
+             <img src="{{ section.settings.img_right | img_url:'master' }}" alt="{{ section.settings.img_right.alt }}">
+             {% endif %}
+             <h2 class="u-h1">{{ section.settings.title_right }}</h2>
+             {{ section.settings.content_right }}
+             {% if section.settings.button_right %}
+              <a href="{{ section.settings.url_right }}" class="Button Button--primary">{{ section.settings.button_right }}</a>
+             {% endif %}
+             {% if section.settings.picto %}
+               <div class="Picto__lab">
+                 <img src="{{ section.settings.picto | img_url:'master' }}" alt="{{ section.settings.picto.alt }}">
+               </div>
+             {% endif %}
+           </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Text-with-Image-Home",
+  "class": "Section--spacingNormal",
+  "settings": [
+
+        {
+          "type": "header",
+          "content": "Image Text left"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_left",
+          "label": "Image left"
+        },
+        {
+          "type": "textarea",
+          "id": "title_left",
+          "label": "Title left"
+        },
+        {
+          "type": "richtext",
+          "id": "content_left",
+          "label": "Content left"
+        },
+        {
+          "type": "text",
+          "id": "button_left",
+          "label": "Button left",
+          "default": "En savoir plus"
+        },
+        {
+          "type": "url",
+          "id": "url_left",
+          "label": "Link left"
+        },
+        {
+          "type": "header",
+          "content": "Image Text right"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_right",
+          "label": "Image right"
+        },
+        {
+          "type": "textarea",
+          "id": "title_right",
+          "label": "Title right"
+        },
+        {
+          "type": "richtext",
+          "id": "content_right",
+          "label": "Content right"
+        },
+        {
+          "type": "text",
+          "id": "button_right",
+          "label": "Button right",
+          "default": "Découvrir la comporta bohemia"
+        },
+        {
+          "type": "url",
+          "id": "url_right",
+          "label": "Link right"
+        },
+        {
+          "type": "image_picker",
+          "id": "picto",
+          "label": "Picto"
+        }
+  ],
+  "presets": [
+    {
+      "category": "Image",
+      "name": "Text with image Home",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
