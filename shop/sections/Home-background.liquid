@@ -1,11 +1,24 @@
 <section class="Section relative" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="home-background">
-
-
+    {% if section.settings.background != blank %}
+      <div class="HomeCards__background">
+      </div>
+    {% endif %}
 </section>
+<style>
+   #section-{{ section.id }} .HomeCards__background{
+        background-image: url({{ section.settings.background | img_url:'master' }});
+    }
+</style>
 {% schema %}
 {
   "name": "Home background",
   "settings": [
+
+     {
+       "type": "image_picker",
+       "id": "background",
+       "label": "Background"
+     }
 
   ],
   "presets": [

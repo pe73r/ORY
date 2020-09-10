@@ -1,6 +1,6 @@
 <section class="Section HomeCards relative" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="home-cards">
   <div class="container-small">
-      <div class="grid">
+      <div class="grid grid--medium"> 
         {% for block in section.blocks %}
          <div class="1/3--lap-and-up grid__cell" id="block-{{ block.id }}">
             <h3 class="u-h3 Gotham Card__title">{{ block.settings.title }}</h3>
@@ -25,11 +25,6 @@
        {% endfor %}
     </div>
   </div>
-  {% if section.settings.background != blank %}
-    <div class="HomeCards__background">
-    </div>
-  {% endif %}
-
 </section>
 <style>
    {% for block in section.blocks %}
@@ -37,10 +32,6 @@
         background-image: url({{ block.settings.image | img_url:'master' }});
       }
    {% endfor %}
-
-   .HomeCards__background{
-        background-image: url({{ section.settings.background | img_url:'master' }});
-    }
 </style>
 <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -66,15 +57,6 @@
   "class": "Section--spacingNormal",
   "max_blocks": 3,
   "settings": [
-      {
-        "type": "header",
-        "content": "Background"
-      },
-     {
-       "type": "image_picker",
-       "id": "background",
-       "label": "Background"
-     }
 
   ],
   "blocks": [
