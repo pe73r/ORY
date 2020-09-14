@@ -166,7 +166,7 @@
           "slide-0"
         ],
         "settings": {
-          "show_fullscreen": false,
+          "show_fullscreen": true,
           "show_arrow": false,
           "autoplay": false,
           "cycle_speed": 5,
@@ -183,9 +183,9 @@
             "type": "collection",
             "settings": {
               "collection": "serums",
-              "title": "",
+              "title": "Découvrez notre routine peau parfaite",
               "grid_items_count": 8,
-              "button_text": "View all products"
+              "button_text": ""
             }
           }
         },
@@ -193,11 +193,10 @@
           "featured-collection-0"
         ],
         "settings": {
-          "subtitle": "",
-          "title": "Découvrez notre routine peau parfaite",
+          "title": "",
           "layout_mode": "grid",
           "show_product_info": true,
-          "show_vendor": false,
+          "show_vendor": true,
           "show_color_swatch": false,
           "grid_mobile_items_per_row": "1",
           "grid_desktop_items_per_row": 3
@@ -263,7 +262,7 @@
           "image_size": "large",
           "stack_images": true,
           "show_thumbnails": false,
-          "enable_image_zoom": true,
+          "enable_image_zoom": false,
           "enable_video_looping": false,
           "tab_page_1_handle": "",
           "tab_page_2_handle": "",
@@ -299,7 +298,7 @@
         "settings": {
           "bg_color": "#e5e4e2",
           "image": "shopify:\/\/shop_images\/92-04-GAMME-V13.png",
-          "image-mobile": "",
+          "image-mobile": "shopify:\/\/shop_images\/mob.png",
           "title": "Huile de beauté",
           "title_color": "#375ea7",
           "subtitle": "<p>Le geste beauté essentiel pour révéler<br>l'éclat lorsque le teint fait grise mine<\/p>",
@@ -365,10 +364,75 @@
           "picto": "shopify:\/\/shop_images\/PICTO_LAB.png"
         }
       },
-      "1599744490282": {
-        "type": "Home-background",
+      "1600112645121": {
+        "type": "home-background",
         "settings": {
           "background": "shopify:\/\/shop_images\/PATTERN.png"
+        }
+      },
+      "1600112832953": {
+        "type": "home-pictos",
+        "blocks": {
+          "1600112840685": {
+            "type": "picto",
+            "settings": {
+              "svg": "",
+              "image": "shopify:\/\/shop_images\/97-03-PICTO-FORMULECLEAN.png",
+              "image_size": 66,
+              "title": "FORMULES <br> CLEAN",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
+            }
+          },
+          "1600112898694": {
+            "type": "picto",
+            "settings": {
+              "svg": "",
+              "image": "shopify:\/\/shop_images\/97-03-PICTO-FORMULEJUSTE.png",
+              "image_size": 60,
+              "title": "FORMULES <br>\nJUSTES",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
+            }
+          },
+          "1600113008901": {
+            "type": "picto",
+            "settings": {
+              "svg": "",
+              "image": "shopify:\/\/shop_images\/97-03-PICTO-BIENFAITS.png",
+              "image_size": 60,
+              "title": "LES BIENFAITS<br>\nDU RIZ",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
+            }
+          },
+          "1600113186773": {
+            "type": "picto",
+            "settings": {
+              "svg": "",
+              "image": "shopify:\/\/shop_images\/97-03-PICTO-RIZOTHERAPIE_76af1d52-3138-4b51-9bc7-874ee7999ad2.png",
+              "image_size": 40,
+              "title": "LA<br>\nRIZIOTHÉRAPIE",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
+            }
+          },
+          "1600113265033": {
+            "type": "picto",
+            "settings": {
+              "svg": "",
+              "image": "shopify:\/\/shop_images\/97-03-PICTO-RESPONSABILITE.png",
+              "image_size": 60,
+              "title": "RESPONSABILITÉ",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1600112840685",
+          "1600112898694",
+          "1600113008901",
+          "1600113186773",
+          "1600113265033"
+        ],
+        "settings": {
+          "title": "Des soins bons pour la peau & la planète"
         }
       }
     },
@@ -376,9 +440,10 @@
       "slideshow",
       "1599679872270",
       "1599729142328",
-      "1599744490282",
+      "1600112645121",
       "1599739752667",
-      "featured-collections"
+      "featured-collections",
+      "1600112832953"
     ]
   },
   "presets": {

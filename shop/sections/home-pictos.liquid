@@ -1,0 +1,99 @@
+<section id="section-{{ section.id }}">
+  <header class="SectionHeader SectionHeader--center">
+    <div class="Container">
+      {%- if section.settings.title != blank -%}
+        <h3 class="SectionHeader__SubHeading u-h1">{{ section.settings.title }}</h3>
+      {%- endif -%}
+   </div>
+</header>
+<div class="container-large">
+  <div class="Pictos__flex">
+   {% for block in section.blocks %}
+     <div id="block-{{ block.id }}" class="Picto__block">
+       <div class="Picto__image">
+        {% if block.settings.svg != blank %}
+            <img src="{{ block.settings.svg }}" alt="{{ block.settings.svg.alt }}">
+        {% else %}
+           {% if block.settings.image != blank %}
+            <img src="{{ block.settings.image | img_url:'master' }}" alt="{{ block.settings.image.alt }}">
+           {% endif %}
+        {% endif %}
+       </div>
+       <h4 class="u-h4 Gotham">{{ block.settings.title }}</h4>
+       {{ block.settings.content }}
+     </div>
+   {% endfor %}
+  </div>
+</div>
+</section>
+<style>
+   {% for block in section.blocks %}
+      #block-{{ block.id }} .Picto__image {
+        width: {{ block.settings.image_size }}px;
+      }
+   {% endfor %}
+</style>
+
+{% schema %}
+{
+  "name": "Pictos",
+  "class": "Section--spacingNormal",
+  "max_blocks": 6,
+  "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Des soins bons pour la peau & la planète"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "picto",
+      "name": "Picto",
+      "settings": [
+             {
+               "type": "text",
+               "id": "svg",
+               "label": "SVG image",
+               "info": "From shopify files"
+             },
+             {
+               "type": "image_picker",
+               "id": "image",
+               "label": "Image"
+             },
+             {
+                "type":      "range",
+                "id":        "image_size",
+                "min":       10,
+                "max":        100,
+                "step":       1,
+                "unit":       "px",
+                "label":     "Image size",
+                "default":   40
+            },
+             {
+               "type": "textarea",
+               "id": "title",
+               "label": "Title",
+               "default": "Title"
+             },
+             {
+               "type": "richtext",
+               "id": "content",
+               "label": "Content",
+               "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
+             }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Text",
+      "name": "Pictos",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

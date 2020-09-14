@@ -11,19 +11,19 @@
              <h2 class="u-h2">{{ section.settings.title_left }}</h2>
              {{ section.settings.content_left }}
              {% if section.settings.button_left %}
-              <a href="{{ section.settings.url_left }}" class="Button Button--primary">{{ section.settings.button_left }}</a>
+              <a href="{{ section.settings.url_left }}" class="Button Button--primary Button--full">{{ section.settings.button_left }}</a>
              {% endif %}
            </div>
          </div>
          <div class="5/12--lap-and-up grid__cell">
-           <div class="Text_with_image_block relative">
+           <div class="Text_with_image_block relative"> 
              {% if section.settings.img_right != blank %}
              <img src="{{ section.settings.img_right | img_url:'master' }}" alt="{{ section.settings.img_right.alt }}">
              {% endif %}
              <h2 class="u-h1">{{ section.settings.title_right }}</h2>
              {{ section.settings.content_right }}
              {% if section.settings.button_right %}
-              <a href="{{ section.settings.url_right }}" class="Button Button--primary">{{ section.settings.button_right }}</a>
+              <a href="{{ section.settings.url_right }}" class="Button Button--primary Button--full">{{ section.settings.button_right }}</a>
              {% endif %}
              {% if section.settings.picto %}
                <div class="Picto__lab">

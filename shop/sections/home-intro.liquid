@@ -2,7 +2,7 @@
   <div class="container-full relative">
     <div class="HomeIntro__background">
       {%- if section.settings.image != blank -%}
-        <div class="">
+        <div class="desktop-only">
           {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
           <div class="AspectRatio HomeIntro__image" style="max-width: {{ section.settings.image.width }}px; --aspect-ratio: {{ section.settings.image.aspect_ratio }}">
             {%- assign image_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
@@ -11,6 +11,11 @@
               <img src="{{ section.settings.image | img_url: '800x' }}" alt="{{ section.settings.image.alt | escape }}">
             </noscript>
           </div>
+        </div>
+      {%- endif -%}
+      {%- if section.settings.image-mobile != blank -%}
+        <div class="mobile-only">
+           <img src="{{ section.settings.image-mobile | img_url: 'master' }}" alt="{{ section.settings.image.alt | escape }}">
         </div>
       {%- endif -%}
     </div>
@@ -58,7 +63,8 @@
         {
           "type": "image_picker",
           "id": "image-mobile",
-          "label": "Image mobile"
+          "label": "Image in mobile",
+          "info": "screens until 640px"
         },
         {
           "type": "text",

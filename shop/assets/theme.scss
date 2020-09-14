@@ -5857,6 +5857,15 @@ select::-ms-expand {
   and removing the remaining amount in both direction (0.65 / 2 => 0.325) to have more easier and consistent alignments
 */
 
+.SectionHeader__Heading.SectionHeader__Heading{
+  letter-spacing: 0.1em;
+}
+
+.SectionHeader__SubHeading.SectionHeader__SubHeading {
+  line-height: 1.4em;
+}
+
+
 .SectionHeader__Heading.SectionHeader__Heading,
 .SectionHeader__SubHeading.SectionHeader__SubHeading {
   margin-top: -0.325em;
@@ -11886,6 +11895,16 @@ $vertical-spacing-two-products-per-row  : 0px;
   width: 100%;
 }
 
+.Button--full{
+  width: fit-content;
+}
+
+@include av-mq('phone') {
+  .Button--full{
+    width: 100%;
+  }
+}
+
 /*------  containers --------*/
 
 .container-full{
@@ -11922,7 +11941,7 @@ $vertical-spacing-two-products-per-row  : 0px;
 
 @include av-mq('phone') {
   .Slideshow__Content{
-    margin-left: 0; 
+    margin-left: 0;
   }
 }
 
@@ -11946,6 +11965,7 @@ $vertical-spacing-two-products-per-row  : 0px;
 .HomeIntro__title{
    margin-bottom: 20px;
    line-height: 1.2em;
+   letter-spacing: 0.1em;
 }
 
 .HomeIntro__subtitle{
@@ -12066,6 +12086,7 @@ $vertical-spacing-two-products-per-row  : 0px;
   padding: 20px;
   border: 1px solid $blue-oryza;
   min-height: 350px;
+  background-color: white;
 }
 
 .front .img {
@@ -12079,6 +12100,13 @@ $vertical-spacing-two-products-per-row  : 0px;
   position: relative;
 }
 
+}
+
+
+@include av-mq('phone') {
+  .front__button{
+  margin-bottom: 30px;
+  }
 }
 
 
@@ -12134,5 +12162,54 @@ $vertical-spacing-two-products-per-row  : 0px;
 @include av-mq('phone') {
   .Block__left{
     margin-top: 0;
+  }
+
+  .Text_with_image_block{
+    padding: 20px;
+  }
+}
+
+//// Section Home pictos ////
+
+.Pictos__flex{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  div:not(:last-child){
+    margin-right: 20px;
+  }
+}
+
+.Picto__image{
+    img{
+      width: 100%;
+    }
+}
+
+.Picto__block{
+  max-width: 270px;
+  min-width: 150px;
+  h4{
+    margin-bottom: 5px;
+  }
+}
+
+@include av-mq('pocket') {
+  .Pictos__flex{
+    flex-direction: column;
+    div:not(:last-child){
+      margin-right: 0;
+    }
+  }
+
+  .Picto__block {
+    max-width: 100%;
+    margin-bottom: 30px;
+
+    h4{
+      margin-bottom: 10px;
+    }
+
   }
 }
