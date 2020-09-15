@@ -84,9 +84,12 @@
           <p class="ProductItem__Vendor Heading">{{ product.vendor }}</p>
         {%- endif -%}
 
-        <h2 class="ProductItem__Title Heading">
+        <h2 class="ProductItem__Title Heading u-h4">
           <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
         </h2>
+        {% if product.metafields.product.grid-text != blank %}
+          <h4 class="ProductItem__grid-text u-h8">{{ product.metafields.product.grid-text }}</h4>
+        {% endif %}
 
         {%- if show_color_swatch -%}
           {%- assign color_swatch_list = '' -%}
@@ -138,6 +141,12 @@
           {%- endif -%}
         {%- endif -%}
 
+        {% if section.settings.show_button %}
+           <div class="ProductItem__button">
+             <a href="{{ product.url }}" class="Button Button--primary">{{ 'collection.product.view_product' | t }}</a>
+           </div>
+        {%- endif -%}
+
         {%- if show_price_on_hover == nil -%}
           {%- assign show_price_on_hover = settings.product_show_price_on_hover -%}
         {%- endif -%}
@@ -146,7 +155,7 @@
           {{- color_swatch_list -}}
         {%- endif -%}
 
-        {%- if product.template_suffix != 'coming-soon' -%}
+        {%- if product.template_suffix != 'coming-soon' and section.settings.show_price == true -%}
           <div class="ProductItem__PriceList {% if show_price_on_hover %}ProductItem__PriceList--showOnHover{% endif %} Heading">
             {%- if product.compare_at_price > product.price -%}
               <span class="ProductItem__Price Price Price--highlight Text--subdued">{{ product.price | money_without_trailing_zeros }}</span>

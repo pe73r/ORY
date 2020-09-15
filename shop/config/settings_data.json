@@ -32,7 +32,7 @@
     "show_image_zooming": true,
     "show_element_staggering": false,
     "search_mode": "product,article",
-    "product_show_price_on_hover": true,
+    "product_show_price_on_hover": false,
     "product_show_secondary_image": false,
     "product_info_alignment": "center",
     "product_image_size": "natural",
@@ -196,7 +196,8 @@
           "title": "",
           "layout_mode": "grid",
           "show_product_info": true,
-          "show_vendor": true,
+          "show_price": false,
+          "show_vendor": false,
           "show_color_swatch": false,
           "grid_mobile_items_per_row": "1",
           "grid_desktop_items_per_row": 3
@@ -434,6 +435,20 @@
         "settings": {
           "title": "Des soins bons pour la peau & la planète"
         }
+      },
+      "1600158550719": {
+        "type": "image-with-text-overlay-homepage",
+        "settings": {
+          "section_size": "small",
+          "image": "shopify:\/\/shop_images\/background.jpg",
+          "overlay_color": "#000000",
+          "overlay_opacity": 0,
+          "subheading": "Vivre une experience de bienêtre holistique autour des propriétés du riz",
+          "title": "le lab",
+          "picto": "shopify:\/\/shop_images\/PICTO_LAB.png",
+          "button_text": "Découvrez la rizothérapie",
+          "url": ""
+        }
       }
     },
     "content_for_index": [
@@ -443,6 +458,7 @@
       "1600112645121",
       "1599739752667",
       "featured-collections",
+      "1600158550719",
       "1600112832953"
     ]
   },

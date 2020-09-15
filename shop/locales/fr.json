@@ -156,7 +156,7 @@
     },
     "product": {
       "from_price_html": "À partir de {{min_price}}",
-      "view_product": "Voir plus"
+      "view_product": "Je découvre"
     }
   },
   "customer": {

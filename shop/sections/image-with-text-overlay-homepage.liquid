@@ -1,0 +1,140 @@
+<section id="section-{{ section.id }}">
+  {%- capture mobile_size -%}750x{% if section.settings.image.height >= 960 %}960{% else %}{{ section.settings.image.height }}{% endif %}{%- endcapture -%}
+  {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+    <header class="SectionHeader SectionHeader--center">
+      <div class="Container">
+        {%- if section.settings.title != blank -%}
+          <h2 class="SectionHeader__Heading u-h1">{{ section.settings.title }}</h2>
+        {%- endif -%}
+        {%- if section.settings.subheading != blank -%}
+          <h3 class="SectionHeader__SubHeading u-h3">{{ section.settings.subheading }}</h3>
+        {%- endif -%}
+     </div>
+    </header>
+  {% endif %}
+ <div class="container-large">
+  <div class="FlexboxIeFix relative">
+    <div class="ImageHero {% if section.settings.section_size != 'normal' %}ImageHero--{{ section.settings.section_size }}{% endif %}" {% if section.settings.image %}style="background: url({{ section.settings.image | img_url: '1x1' }})"{% endif %}>
+      <div class="ImageHero__ImageWrapper">
+        <div class="ImageHero__Image {% if section.settings.overlay_opacity > 0 %}ImageHero__ImageWrapper--hasOverlay{% endif %} Image--lazyLoad Image--zoomOut"
+             data-optimumx="1.4"
+             data-expand="-150"
+             {% if section.settings.image %}data-bgset="{{ section.settings.image | img_url: mobile_size, crop: 'center' }} 750w, {{ section.settings.image | img_url: '1000x' }} 1000w, {{ section.settings.image | img_url: '1500x' }} 1500w"{% endif %}>
+        </div>
+
+        <noscript>
+          <div class="ImageHero__Image" style="background-image: url({{ section.settings.image | img_url: '1000x' }})"></div>
+        </noscript>
+
+        {%- unless section.settings.image != blank -%}
+          <div class="PlaceholderBackground PlaceholderBackground--Dark">
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'PlaceholderBackground__Svg' }}
+          </div>
+        {%- endunless -%}
+      </div>
+    </div>
+    {% if section.settings.picto %} 
+      <div class="ImageOverlay__picto desktop-only">
+        <img src="{{ section.settings.picto | img_url:'master' }}" alt="{{ section.settings.picto.alt }}">
+      </div>
+    {% endif %}
+    {% if section.settings.button_text != blank %}
+      <div class="ImageOverlay__button">
+        <a href="{{ section.settings.url }}" class="Button Button--primary">{{ section.settings.button_text }}</a>
+      </div>
+    {% endif %}
+   </div>
+ </div>
+</section>
+
+<style>
+  #section-{{ section.id }} .ImageHero__ImageWrapper--hasOverlay::before {
+    {%- assign overlay_opacity = section.settings.overlay_opacity | divided_by: 100.0 -%}
+    background-color: {{ section.settings.overlay_color | color_modify: 'alpha', overlay_opacity }};
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Home Image overlay",
+  "class": "Section--spacingLarge",
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_size",
+      "label": "Section size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "large"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "1500 x 800px .jpg recommended"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 30
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub-heading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "le lab"
+    },
+    {
+      "type": "image_picker",
+      "id": "picto",
+      "label": "Picto"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button",
+      "default": "Découvrez la rizothérapie"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Image",
+      "name": "Home Image (overlay)",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
