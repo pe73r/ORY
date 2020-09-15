@@ -2,7 +2,7 @@
   <header class="SectionHeader SectionHeader--center">
     <div class="Container">
       {%- if section.settings.title != blank -%}
-        <h3 class="SectionHeader__SubHeading u-h1">{{ section.settings.title }}</h3>
+        <h3 class="SectionHeader__SubHeading u-h1 {% if section.settings.gotham %} Gotham {% endif %}">{{ section.settings.title }}</h3>
       {%- endif -%}
    </div>
   </header>
@@ -45,6 +45,12 @@
         "id": "title",
         "label": "Title",
         "default": "Des soins bons pour la peau & la planète"
+      },
+      {
+        "type": "checkbox",
+        "id": "gotham",
+        "label": "Gotham font in title ?",
+        "default": true
       }
   ],
   "blocks": [

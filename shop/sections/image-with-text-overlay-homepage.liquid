@@ -4,7 +4,7 @@
     <header class="SectionHeader SectionHeader--center">
       <div class="Container">
         {%- if section.settings.title != blank -%}
-          <h2 class="SectionHeader__Heading u-h1">{{ section.settings.title }}</h2>
+          <h2 class="SectionHeader__Heading u-h1 {% if section.settings.gotham %} Gotham {% endif %}">{{ section.settings.title }}</h2>
         {%- endif -%}
         {%- if section.settings.subheading != blank -%}
           <h3 class="SectionHeader__SubHeading u-h3">{{ section.settings.subheading }}</h3>
@@ -33,7 +33,7 @@
         {%- endunless -%}
       </div>
     </div>
-    {% if section.settings.picto %} 
+    {% if section.settings.picto %}
       <div class="ImageOverlay__picto desktop-only">
         <img src="{{ section.settings.picto | img_url:'master' }}" alt="{{ section.settings.picto.alt }}">
       </div>
@@ -111,6 +111,12 @@
       "id": "title",
       "label": "Heading",
       "default": "le lab"
+    },
+    {
+      "type": "checkbox",
+      "id": "gotham",
+      "label": "Gotham font in title ?",
+      "default": true
     },
     {
       "type": "image_picker",

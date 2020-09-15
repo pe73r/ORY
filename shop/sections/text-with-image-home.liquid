@@ -8,7 +8,7 @@
              {% if section.settings.img_left != blank %}
              <img src="{{ section.settings.img_left | img_url:'master' }}" alt="{{ section.settings.img_left.alt }}">
              {% endif %}
-             <h2 class="u-h2">{{ section.settings.title_left }}</h2>
+             <h2 class="u-h2 {% if section.settings.gotham-1 %} Gotham {% endif %}">{{ section.settings.title_left }}</h2>
              {{ section.settings.content_left }}
              {% if section.settings.button_left %}
               <a href="{{ section.settings.url_left }}" class="Button Button--primary Button--full">{{ section.settings.button_left }}</a>
@@ -16,11 +16,11 @@
            </div>
          </div>
          <div class="5/12--lap-and-up grid__cell">
-           <div class="Text_with_image_block relative"> 
+           <div class="Text_with_image_block relative">
              {% if section.settings.img_right != blank %}
              <img src="{{ section.settings.img_right | img_url:'master' }}" alt="{{ section.settings.img_right.alt }}">
              {% endif %}
-             <h2 class="u-h1">{{ section.settings.title_right }}</h2>
+             <h2 class="u-h2 {% if section.settings.gotham-2 %} Gotham {% endif %}">{{ section.settings.title_right }}</h2>
              {{ section.settings.content_right }}
              {% if section.settings.button_right %}
               <a href="{{ section.settings.url_right }}" class="Button Button--primary Button--full">{{ section.settings.button_right }}</a>
@@ -57,6 +57,12 @@
           "label": "Title left"
         },
         {
+          "type": "checkbox",
+          "id": "gotham-1",
+          "label": "Gotham title ?",
+          "default": true
+        },
+        {
           "type": "richtext",
           "id": "content_left",
           "label": "Content left"
@@ -85,6 +91,12 @@
           "type": "textarea",
           "id": "title_right",
           "label": "Title right"
+        },
+        {
+          "type": "checkbox",
+          "id": "gotham-2",
+          "label": "Gotham title ?",
+          "default": true
         },
         {
           "type": "richtext",

@@ -1,34 +1,24 @@
 <section class="Section HomeCards relative" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="home-cards">
   <div class="container-small">
-    {%- if section.settings.subheading != blank or section.settings.title != blank -%}
-      <header class="SectionHeader SectionHeader--center">
-        <div class="Container">
-          {%- if section.settings.title != blank -%}
-            <h2 class="SectionHeader__Heading u-h1 {% if section.settings.gotham %} Gotham {% endif %}">{{ section.settings.title }}</h2>
-          {%- endif -%}
-          {%- if section.settings.subheading != blank -%}
-            <h3 class="SectionHeader__SubHeading u-h3">{{ section.settings.subheading }}</h3>
-          {%- endif -%}
-       </div>
-      </header>
-    {% endif %}
-    <div class="grid grid--medium">
+      <div class="grid grid--medium">
         {% for block in section.blocks %}
-         <div class="1/3--lap-and-up grid__cell Home__Card relative" id="block-{{ block.id }}">
+         <div class="1/3--lap-and-up grid__cell" id="block-{{ block.id }}">
             <h3 class="u-h3 Gotham Card__title">{{ block.settings.title }}</h3>
-              <div class="Card">
-                 <div class="overlay">
+            <div class="cardContainer inactive">
+             <div class="card">
+               <div class="side front">
+                 <div class="img img1"></div>
+               </div>
+               <div class="side back">
+                 <div class="info">
                     {{ block.settings.content }}
-                </div>
-              </div>
+                 </div>
+               </div>
+             </div>
+            </div>
             {% if block.settings.button_text != blank %}
               <div class="front__button">
                 <a href="{{ block.settings.url }}" class="Button Button--primary Button--card">{{ block.settings.button_text }}</a>
-              </div>
-            {% endif %}
-            {% if block.settings.picto != blank %}
-              <div class="Card__picto desktop-only"> 
-                <img src="{{ block.settings.picto | img_url:'master' }}" alt="{{ block.settings.picto.alt }}">
               </div>
             {% endif %}
           </div>
@@ -38,34 +28,36 @@
 </section>
 <style>
    {% for block in section.blocks %}
-      #block-{{ block.id }} .Card {
+      #block-{{ block.id }} .front .img1 {
         background-image: url({{ block.settings.image | img_url:'master' }});
       }
    {% endfor %}
 </style>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous">
+</script>
+<script type="text/javascript">
+  const cards = document.querySelectorAll(".card");
 
+  function transition() {
+  if (this.classList.contains("active")) {
+   this.classList.remove("active");
+  } else {
+   this.classList.add("active");
+  }
+  }
+
+  cards.forEach(card => card.addEventListener("click", transition));
+</script>
 {% schema %}
 {
   "name": "Home cards",
   "class": "Section--spacingNormal",
   "max_blocks": 3,
   "settings": [
-       {
-         "type": "text",
-         "id": "title",
-         "label": "Title"
-       },
-       {
-         "type": "checkbox",
-         "id": "gotham",
-         "label": "Gotham font in title ?",
-         "default": true
-       },
-       {
-         "type": "text",
-         "id": "subheading",
-         "label": "Sub-heading"
-       }
+
   ],
   "blocks": [
     {
@@ -107,11 +99,6 @@
              "id": "content",
              "label": "Content",
              "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
-           },
-           {
-             "type": "image_picker",
-             "id": "picto",
-             "label": "Picto"
            }
       ]
     }
@@ -119,7 +106,7 @@
   "presets": [
     {
       "category": "Image",
-      "name": "Home cards Hover",
+      "name": "Home cards Click",
       "settings": {}
     }
   ]

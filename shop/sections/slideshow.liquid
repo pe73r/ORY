@@ -127,6 +127,8 @@
 </section>
 
 <style>
+
+
   #section-{{ section.id }} .SectionHeader__SubHeading,
   #section-{{ section.id }} .SectionHeader__Heading,
   #section-{{ section.id }} .flickity-page-dots {
@@ -136,7 +138,7 @@
   #section-{{ section.id }} .Button {
     color: {{ section.settings.button_color }};
     border: 2px solid {{ section.settings.border_color}};
-  } 
+  }
 
   #section-{{ section.id }} .Button::before {
     background-color: {{ section.settings.button_background }};
@@ -147,6 +149,12 @@
       #section-{{ section.id }} .Button:hover {
         color: {{ section.settings.button_background }};
       }
+    }
+  {%- endif -%}
+
+  {%- if block.settings.show_button_transition == 'middleCenter'-%}
+    .Slideshow__Content{
+      margin-left: 70px;
     }
   {%- endif -%}
 </style>

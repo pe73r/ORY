@@ -82,9 +82,9 @@
         "settings": {
           "enable_bar": true,
           "home_page_only": false,
-          "background": "#f1e4d8",
-          "text_color": "#343434",
-          "content": "Announce something here",
+          "background": "#135eab",
+          "text_color": "#ffffff",
+          "content": "ORYZA LAB ANNOUNCEENT BAR",
           "link": ""
         }
       },
@@ -149,10 +149,10 @@
           "slide-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Banner.png",
+              "image": "shopify:\/\/shop_images\/DSCF7203.png",
               "mobile_image": "shopify:\/\/shop_images\/card.png",
-              "apply_overlay": true,
-              "content_position": "middleLeft",
+              "apply_overlay": false,
+              "content_position": "middleRight",
               "title": "HUILE DE BEAUTE",
               "subheading": "Le geste beauté essentiel<br>\npour réveler l'éclat <br>\nlorsque le teint fait grise mine",
               "button_1_text": "Découvrez l'huile de beauté",
@@ -194,11 +194,13 @@
         ],
         "settings": {
           "title": "",
+          "gotham": true,
           "layout_mode": "grid",
           "show_product_info": true,
           "show_price": false,
           "show_vendor": false,
           "show_color_swatch": false,
+          "show_button": true,
           "grid_mobile_items_per_row": "1",
           "grid_desktop_items_per_row": 3
         }
@@ -298,10 +300,10 @@
         "type": "home-intro",
         "settings": {
           "bg_color": "#e5e4e2",
-          "image": "shopify:\/\/shop_images\/92-04-GAMME-V13.png",
+          "image": "shopify:\/\/shop_images\/DSCF7417.png",
           "image-mobile": "shopify:\/\/shop_images\/mob.png",
           "title": "Huile de beauté",
-          "title_color": "#375ea7",
+          "title_color": "#454545",
           "subtitle": "<p>Le geste beauté essentiel pour révéler<br>l'éclat lorsque le teint fait grise mine<\/p>",
           "button_text": "Découvrez l'huile de beauté",
           "url": ""
@@ -317,7 +319,8 @@
               "image": "shopify:\/\/shop_images\/card_1.png",
               "button_text": "Découvrez l'huile de beauté",
               "url": "",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+              "picto": ""
             }
           },
           "1599730598478": {
@@ -327,17 +330,19 @@
               "image": "shopify:\/\/shop_images\/card_2.png",
               "button_text": "Découvrez l'huile de beauté",
               "url": "",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+              "picto": ""
             }
           },
           "1599731501359": {
             "type": "card",
             "settings": {
               "title": "Sensorialité",
-              "image": "shopify:\/\/shop_images\/card.png",
+              "image": "shopify:\/\/shop_images\/DSCF5644.png",
               "button_text": "Découvrez l'huile de beauté",
               "url": "",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+              "picto": ""
             }
           }
         },
@@ -347,18 +352,23 @@
           "1599731501359"
         ],
         "settings": {
+          "title": "",
+          "gotham": true,
+          "subheading": ""
         }
       },
       "1599739752667": {
         "type": "text-with-image-home",
         "settings": {
-          "img_left": "shopify:\/\/shop_images\/door.png",
-          "title_left": "Il ne peut y avoir de joie<br>\nprofonde dans l'agitation",
+          "img_left": "shopify:\/\/shop_images\/hotel.png",
+          "title_left": "L'HOTEL",
+          "gotham-1": true,
           "content_left": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
           "button_left": "Découvrir la comporta bohemia",
           "url_left": "",
           "img_right": "",
-          "title_right": "Born in Portugal<br>\nMade in France",
+          "title_right": "BORN IN PORTUGAL<br>\nMADE IN FRANCE",
+          "gotham-2": true,
           "content_right": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
           "button_right": "En savoir plus",
           "url_right": "",
@@ -433,21 +443,71 @@
           "1600113265033"
         ],
         "settings": {
-          "title": "Des soins bons pour la peau & la planète"
+          "title": "Des soins bons pour la peau & la planète",
+          "gotham": true
         }
       },
       "1600158550719": {
         "type": "image-with-text-overlay-homepage",
         "settings": {
           "section_size": "small",
-          "image": "shopify:\/\/shop_images\/background.jpg",
+          "image": "shopify:\/\/shop_images\/DSCF7755.png",
           "overlay_color": "#000000",
           "overlay_opacity": 0,
           "subheading": "Vivre une experience de bienêtre holistique autour des propriétés du riz",
           "title": "le lab",
+          "gotham": true,
           "picto": "shopify:\/\/shop_images\/PICTO_LAB.png",
           "button_text": "Découvrez la rizothérapie",
           "url": ""
+        }
+      },
+      "1600207460167": {
+        "type": "home-cards",
+        "blocks": {
+          "1600207545853": {
+            "type": "card",
+            "settings": {
+              "title": "LES ACTIFS AUTOUR DU RIZ",
+              "image": "shopify:\/\/shop_images\/DSCF5644.png",
+              "button_text": "Découvrez l'huile de beauté",
+              "url": "",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+              "picto": ""
+            }
+          },
+          "1600207669797": {
+            "type": "card",
+            "settings": {
+              "title": "LA RIZOTHÉRAPIE",
+              "image": "shopify:\/\/shop_images\/DSCF6494.png",
+              "button_text": "Découvrez l'huile de beauté",
+              "url": "",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+              "picto": ""
+            }
+          },
+          "1600207741861": {
+            "type": "card",
+            "settings": {
+              "title": "L'ÉQUIPE SCIENTIFIQUE",
+              "image": "shopify:\/\/shop_images\/DSCF6060.png",
+              "button_text": "Découvrez l'huile de beauté",
+              "url": "",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+              "picto": "shopify:\/\/shop_images\/PICTO_LAB_b521ff02-f4d7-4144-9a29-9016b9a22a3a.png"
+            }
+          }
+        },
+        "block_order": [
+          "1600207545853",
+          "1600207669797",
+          "1600207741861"
+        ],
+        "settings": {
+          "title": "LE LAB",
+          "gotham": true,
+          "subheading": "Vivre une expérience de bien-être holistique construite autour des propiétes du riz"
         }
       }
     },
@@ -458,6 +518,7 @@
       "1600112645121",
       "1599739752667",
       "featured-collections",
+      "1600207460167",
       "1600158550719",
       "1600112832953"
     ]

@@ -1698,7 +1698,7 @@ body {
   transition: color 0.2s ease-in-out;
 
   @if $uppercase-heading {
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 }
@@ -1983,7 +1983,7 @@ body {
   text-transform: uppercase;
   font-size: to-size(12px);
   text-align: center;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   font-family: $button-font-family ;
   font-weight: $heading-font-weight;
   font-style: $heading-font-style;
@@ -2159,7 +2159,7 @@ body {
   margin: -8px;
 
   .ButtonGroup__Item {
-    margin: 8px;
+    margin: 0 8px;
   }
 }
 
@@ -5858,7 +5858,7 @@ select::-ms-expand {
 */
 
 .SectionHeader__Heading.SectionHeader__Heading{
-  letter-spacing: 0.1em;
+  // letter-spacing: 0.1em;
 }
 
 .SectionHeader__SubHeading.SectionHeader__SubHeading {
@@ -5869,7 +5869,8 @@ select::-ms-expand {
 .SectionHeader__Heading.SectionHeader__Heading,
 .SectionHeader__SubHeading.SectionHeader__SubHeading {
   margin-top: -0.325em;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  line-height: 1.2;
 }
 
 .SectionHeader__SubHeading + .SectionHeader__Heading,
@@ -11936,9 +11937,6 @@ $vertical-spacing-two-products-per-row  : 0px;
   margin-bottom: 10px;
 }
 
-.Slideshow__Content{
-  margin-left: 70px;
-}
 
 @include av-mq('phone') {
   .Slideshow__Content{
@@ -11959,7 +11957,7 @@ $vertical-spacing-two-products-per-row  : 0px;
 
 .HomeIntro__content{
   position: absolute;
-  top: 35%;
+  top: 55%;
   left: 55%;
 }
 
@@ -12006,7 +12004,7 @@ $vertical-spacing-two-products-per-row  : 0px;
 
 .front__button{
   margin: auto;
-  margin-top: 30px;
+  margin-top: -1px;
 }
 
 .Card__title{
@@ -12131,6 +12129,7 @@ $vertical-spacing-two-products-per-row  : 0px;
 
   h2{
      line-height: 1.2em;
+     margin-bottom: 10px;
   }
 
   p{
@@ -12243,9 +12242,46 @@ $vertical-spacing-two-products-per-row  : 0px;
   border-top: 1px solid currentColor;
   padding: 4px 0;
   text-align: left;
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
 .ProductItem__button{
   text-align: left;
+}
+
+
+//// Homepage cards simple hover ////
+.Home__Card{
+  .Card {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-size: cover;
+    cursor: pointer;
+    margin-top: 20px;
+    }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background: #fff;
+    opacity: 0;
+    transition: all 0.5s;
+    border: 1px solid $blue-oryza;
+  }
+
+  .Card:hover .overlay {
+    opacity: 1;
+    & .head {
+      transform: translateY(0px);
+    }
+  }
+}
+
+.Card__picto{
+  max-width: 150px;
+  position: absolute;
+  top: 15%;
+  right: -100px;
 }
