@@ -46,9 +46,9 @@
       {%- assign collection = collections[section.blocks.first.settings.collection] -%}
 
       {%- if collection != empty -%}
-        <h2 class="SectionHeader__Heading u-h1 {% if section.settings.gotham %} Gotham {% endif %}">{{ section.blocks.first.settings.title | default: collection.title }}</h2>
+        <h2 class="SectionHeader__Heading u-h2 {% if section.settings.gotham %} Gotham {% endif %}">{{ section.blocks.first.settings.title | default: collection.title }}</h2>
       {%- else -%}
-        <h2 class="SectionHeader__Heading u-h1">{{ 'home_page.onboarding.collection_title' | t }}</h2>
+        <h2 class="SectionHeader__Heading u-h2">{{ 'home_page.onboarding.collection_title' | t }}</h2>
       {%- endif -%}
     {%- endif -%}
     </div>
@@ -67,7 +67,7 @@
           {%- endif -%}
 
           {%- if section.settings.layout_mode == 'grid' -%}
-            <div class="ProductList ProductList--grid ProductList--removeMargin Grid" data-mobile-count="{{ section.settings.grid_mobile_items_per_row }}" data-desktop-count="{{ section.settings.grid_desktop_items_per_row }}">
+            <div class="ProductList Grid" data-mobile-count="{{ section.settings.grid_mobile_items_per_row }}" data-desktop-count="{{ section.settings.grid_desktop_items_per_row }}">
               {%- for product in collection.products limit: block.settings.grid_items_count -%}
                 <div class="Grid__Cell 1/{{ section.settings.grid_mobile_items_per_row }}--phone 1/2--tablet 1/{{ section.settings.grid_desktop_items_per_row }}--lap-and-up">
                   {%- render 'product-item', product: product, show_product_info: section.settings.show_product_info, show_vendor: section.settings.show_vendor, show_color_swatch: section.settings.show_color_swatch, show_labels: true -%}
@@ -148,6 +148,7 @@
 {% schema %}
 {
   "name": "Featured collections",
+  "class": "Section--spacingNormal",
   "max_blocks": 2,
   "settings": [
     {

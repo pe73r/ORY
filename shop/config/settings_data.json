@@ -28,7 +28,7 @@
     "text_font": "futura_n4",
     "base_text_font_size": 14,
     "show_page_transition": true,
-    "show_button_transition": true,
+    "show_button_transition": false,
     "show_image_zooming": true,
     "show_element_staggering": false,
     "search_mode": "product,article",
@@ -154,7 +154,7 @@
               "apply_overlay": false,
               "content_position": "middleRight",
               "title": "HUILE DE BEAUTE",
-              "subheading": "Le geste beauté essentiel<br>\npour réveler l'éclat <br>\nlorsque le teint fait grise mine",
+              "subheading": "Le geste beauté essentiel<br>\npour révéler l'éclat <br>\nlorsque le teint fait grise mine",
               "button_1_text": "Découvrez l'huile de beauté",
               "button_1_link": "",
               "button_2_text": "",
@@ -183,7 +183,7 @@
             "type": "collection",
             "settings": {
               "collection": "serums",
-              "title": "Découvrez notre routine peau parfaite",
+              "title": "DÉCOUVREZ NOTRE ROUTINE PEAU PARFAITE",
               "grid_items_count": 8,
               "button_text": ""
             }
@@ -364,7 +364,7 @@
           "title_left": "L'HOTEL",
           "gotham-1": true,
           "content_left": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
-          "button_left": "Découvrir la comporta bohemia",
+          "button_left": "Découvrir Orizalife",
           "url_left": "",
           "img_right": "",
           "title_right": "BORN IN PORTUGAL<br>\nMADE IN FRANCE",
@@ -443,7 +443,7 @@
           "1600113265033"
         ],
         "settings": {
-          "title": "Des soins bons pour la peau & la planète",
+          "title": "DES SOINS BONS POUR LA PEAU  & LA PLANETE",
           "gotham": true
         }
       },
@@ -455,9 +455,9 @@
           "overlay_color": "#000000",
           "overlay_opacity": 0,
           "subheading": "Vivre une experience de bienêtre holistique autour des propriétés du riz",
-          "title": "le lab",
+          "title": "ORYZALIFE",
           "gotham": true,
-          "picto": "shopify:\/\/shop_images\/PICTO_LAB.png",
+          "picto": "",
           "button_text": "Découvrez la rizothérapie",
           "url": ""
         }
@@ -468,7 +468,7 @@
           "1600207545853": {
             "type": "card",
             "settings": {
-              "title": "LES ACTIFS AUTOUR DU RIZ",
+              "title": "LES ACTIFS <br>AUTOUR DU RIZ",
               "image": "shopify:\/\/shop_images\/DSCF5644.png",
               "button_text": "Découvrez l'huile de beauté",
               "url": "",
@@ -479,7 +479,7 @@
           "1600207669797": {
             "type": "card",
             "settings": {
-              "title": "LA RIZOTHÉRAPIE",
+              "title": "LA <br>RIZOTHÉRAPIE",
               "image": "shopify:\/\/shop_images\/DSCF6494.png",
               "button_text": "Découvrez l'huile de beauté",
               "url": "",
@@ -490,7 +490,7 @@
           "1600207741861": {
             "type": "card",
             "settings": {
-              "title": "L'ÉQUIPE SCIENTIFIQUE",
+              "title": "L'ÉQUIPE <br>SCIENTIFIQUE",
               "image": "shopify:\/\/shop_images\/DSCF6060.png",
               "button_text": "Découvrez l'huile de beauté",
               "url": "",

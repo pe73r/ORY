@@ -5906,7 +5906,7 @@ select::-ms-expand {
   }
 
   .SectionHeader:not(:only-child) {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .SectionHeader__Description {
@@ -11825,6 +11825,8 @@ $vertical-spacing-two-products-per-row  : 0px;
 
 /*------  utilities --------*/
 
+
+
 .relative{
   position: relative;
 }
@@ -11850,7 +11852,9 @@ $vertical-spacing-two-products-per-row  : 0px;
   }
 }
 
+
 /*------  headings  --------*/
+
 
 .Heading__bordered{
   border-bottom: 1px solid currentColor;
@@ -11894,6 +11898,17 @@ $vertical-spacing-two-products-per-row  : 0px;
    max-width:1024px;
    width: 90%;
    margin: auto;
+}
+
+.container-cards{
+  width: 70%;
+  margin: auto;
+}
+
+@include av-mq('phone') {
+  .container-cards{
+    width: 90%;
+  }
 }
 
 /*------  slideshow --------*/
@@ -11975,6 +11990,7 @@ $vertical-spacing-two-products-per-row  : 0px;
 .Card__title{
   margin-bottom: 0;
   text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .HomeCards{

@@ -88,7 +88,7 @@
           <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
         </h2>
         {% if product.metafields.product.grid-text != blank %}
-          <h4 class="ProductItem__grid-text u-h8">{{ product.metafields.product.grid-text }}</h4>
+          <h4 class="ProductItem__grid-text u-h8 Gotham">{{ product.metafields.product.grid-text }}</h4> 
         {% endif %}
 
         {%- if show_color_swatch -%}

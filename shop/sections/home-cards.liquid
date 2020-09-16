@@ -1,5 +1,5 @@
 <section class="Section HomeCards relative" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="home-cards">
-  <div class="container-small">
+  <div class="container-cards">
     {%- if section.settings.subheading != blank or section.settings.title != blank -%}
       <header class="SectionHeader SectionHeader--center">
         <div class="Container">
@@ -27,7 +27,7 @@
               </div>
             {% endif %}
             {% if block.settings.picto != blank %}
-              <div class="Card__picto desktop-only"> 
+              <div class="Card__picto desktop-only">
                 <img src="{{ block.settings.picto | img_url:'master' }}" alt="{{ block.settings.picto.alt }}">
               </div>
             {% endif %}
@@ -73,7 +73,7 @@
       "name": "Card",
       "settings": [
             {
-              "type": "text",
+              "type": "textarea",
               "id": "title",
               "label": "Title",
               "default": "Block title"

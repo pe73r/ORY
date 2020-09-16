@@ -169,7 +169,7 @@ $cursor-zoom-in-2x-svg : "//cdn.shopify.com/s/files/1/0482/4229/4934/t/4/assets/
 
 $drawer-transition-timing: cubic-bezier(0.645, 0.045, 0.355, 1);
 $show-page-transition: true;
-$show-button-transition: true;
+$show-button-transition: false;
 $show-image-zooming: true;
 $show-element-staggering: false;
 
@@ -5941,7 +5941,7 @@ select::-ms-expand {
   }
 
   .SectionHeader:not(:only-child) {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .SectionHeader__Description {
@@ -11860,6 +11860,8 @@ $vertical-spacing-two-products-per-row  : 0px;
 
 /*------  utilities --------*/
 
+
+
 .relative{
   position: relative;
 }
@@ -11885,7 +11887,9 @@ $vertical-spacing-two-products-per-row  : 0px;
   }
 }
 
+
 /*------  headings  --------*/
+
 
 .Heading__bordered{
   border-bottom: 1px solid currentColor;
@@ -11929,6 +11933,17 @@ $vertical-spacing-two-products-per-row  : 0px;
    max-width:1024px;
    width: 90%;
    margin: auto;
+}
+
+.container-cards{
+  width: 70%;
+  margin: auto;
+}
+
+@include av-mq('phone') {
+  .container-cards{
+    width: 90%;
+  }
 }
 
 /*------  slideshow --------*/
@@ -12010,6 +12025,7 @@ $vertical-spacing-two-products-per-row  : 0px;
 .Card__title{
   margin-bottom: 0;
   text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .HomeCards{
