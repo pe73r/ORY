@@ -10,6 +10,7 @@
     "button_background": "#ffffff",
     "button_text_color": "#135eab",
     "button_border_color": "#135eab",
+    "button_submit_text": "#fcfcfc",
     "header_background": "#ffffff",
     "header_heading_color": "#454545",
     "header_light_color": "#9d9d9d",
@@ -26,7 +27,7 @@
     "heading_size": "large",
     "uppercase_heading": true,
     "text_font": "futura_n4",
-    "base_text_font_size": 14,
+    "base_text_font_size": 16,
     "show_page_transition": true,
     "show_button_transition": false,
     "show_image_zooming": true,
@@ -43,10 +44,10 @@
     "cart_show_free_shipping_threshold": false,
     "cart_free_shipping_threshold": "50",
     "share_image": "",
-    "social_facebook": "",
+    "social_facebook": "https:\/\/www.facebook.com\/shopify",
     "social_twitter": "",
     "social_pinterest": "",
-    "social_instagram": "",
+    "social_instagram": "https:\/\/instagram.com\/shopify",
     "social_vimeo": "",
     "social_tumblr": "",
     "social_youtube": "",
@@ -84,8 +85,7 @@
           "home_page_only": false,
           "background": "#135eab",
           "text_color": "#ffffff",
-          "content": "ORYZA LAB ANNOUNCEENT BAR",
-          "link": ""
+          "content": "ORYZA LAB ANNOUNCEENT BAR"
         }
       },
       "header": {
@@ -103,42 +103,50 @@
           "enable_transparent_header": false,
           "enable_transparent_header_collection": false,
           "show_transparent_header_border": false,
-          "transparent_text_color": "#ffffff",
-          "transparent_logo": ""
+          "transparent_text_color": "#ffffff"
         }
       },
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-0": {
-            "type": "text",
-            "settings": {
-              "title": "About the shop",
-              "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
-              "show_social_media": true
-            }
-          },
           "footer-1": {
             "type": "links",
             "settings": {
               "menu": "footer"
             }
           },
+          "81dfa3c2-46ca-4368-ac0f-c7d6a79f3523": {
+            "type": "links",
+            "settings": {
+              "menu": "le-lab",
+              "picto": "shopify:\/\/shop_images\/picto-footer.png"
+            }
+          },
+          "26139d9e-0797-483e-ae61-c364cad4dd98": {
+            "type": "links",
+            "settings": {
+              "menu": "aide"
+            }
+          },
           "footer-2": {
             "type": "newsletter",
             "settings": {
-              "title": "Newsletter",
-              "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+              "title": "REJOIGNEZ LA #ORYZALIFE",
+              "content": "<p>Découvrez nos nouveautés, articles beauté et bénéficiez de -10% sur votre commande.<\/p>",
+              "insta_picto": "shopify:\/\/shop_images\/insta.png",
+              "fb_picto": "shopify:\/\/shop_images\/fb.png",
+              "follow_text": "Suivez nous"
             }
           }
         },
         "block_order": [
-          "footer-0",
           "footer-1",
+          "81dfa3c2-46ca-4368-ac0f-c7d6a79f3523",
+          "26139d9e-0797-483e-ae61-c364cad4dd98",
           "footer-2"
         ],
         "settings": {
-          "show_payment_methods": true,
+          "show_payment_methods": false,
           "show_currency_selector": true,
           "show_locale_selector": true
         }
@@ -156,9 +164,7 @@
               "title": "HUILE DE BEAUTE",
               "subheading": "Le geste beauté essentiel<br>\npour révéler l'éclat <br>\nlorsque le teint fait grise mine",
               "button_1_text": "Découvrez l'huile de beauté",
-              "button_1_link": "",
-              "button_2_text": "",
-              "button_2_link": ""
+              "button_2_text": ""
             }
           }
         },
@@ -229,7 +235,7 @@
       "recently-viewed-products": {
         "type": "recently-viewed-products",
         "settings": {
-          "show_section": true,
+          "show_section": false,
           "title": "Recently viewed",
           "show_product_info": true,
           "show_vendor": false,
@@ -250,25 +256,23 @@
       "product-template": {
         "type": "product-template",
         "settings": {
-          "show_share_buttons": true,
-          "show_vendor": true,
+          "show_share_buttons": false,
+          "show_vendor": false,
           "show_sku": false,
-          "description_below_add_to_cart": false,
+          "description_below_add_to_cart": true,
           "selector_mode": "dropdown",
           "show_color_swatch": false,
           "show_color_carousel": false,
           "show_quantity_selector": true,
           "show_inventory_quantity": false,
-          "inventory_quantity_threshold": 3,
-          "show_price_in_button": false,
-          "show_payment_button": true,
-          "image_size": "large",
-          "stack_images": true,
-          "show_thumbnails": false,
+          "inventory_quantity_threshold": 8,
+          "show_price_in_button": true,
+          "show_payment_button": false,
+          "image_size": "medium",
+          "stack_images": false,
+          "show_thumbnails": true,
           "enable_image_zoom": false,
           "enable_video_looping": false,
-          "tab_page_1_handle": "",
-          "tab_page_2_handle": "",
           "reviews_enabled": false,
           "featured_image_size": "large"
         }
@@ -305,8 +309,7 @@
           "title": "Huile de beauté",
           "title_color": "#454545",
           "subtitle": "<p>Le geste beauté essentiel pour révéler<br>l'éclat lorsque le teint fait grise mine<\/p>",
-          "button_text": "Découvrez l'huile de beauté",
-          "url": ""
+          "button_text": "Découvrez l'huile de beauté"
         }
       },
       "1599729142328": {
@@ -316,22 +319,18 @@
             "type": "card",
             "settings": {
               "title": "Authenticité",
-              "image": "shopify:\/\/shop_images\/card_1.png",
+              "image": "shopify:\/\/shop_images\/authenticite_Oryza.png",
               "button_text": "Découvrez l'huile de beauté",
-              "url": "",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
-              "picto": ""
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
             }
           },
           "1599730598478": {
             "type": "card",
             "settings": {
               "title": "Science",
-              "image": "shopify:\/\/shop_images\/card_2.png",
+              "image": "shopify:\/\/shop_images\/science.png",
               "button_text": "Découvrez l'huile de beauté",
-              "url": "",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
-              "picto": ""
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
             }
           },
           "1599731501359": {
@@ -340,9 +339,7 @@
               "title": "Sensorialité",
               "image": "shopify:\/\/shop_images\/DSCF5644.png",
               "button_text": "Découvrez l'huile de beauté",
-              "url": "",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
-              "picto": ""
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
             }
           }
         },
@@ -365,13 +362,10 @@
           "gotham-1": true,
           "content_left": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
           "button_left": "Découvrir Orizalife",
-          "url_left": "",
-          "img_right": "",
           "title_right": "BORN IN PORTUGAL<br>\nMADE IN FRANCE",
           "gotham-2": true,
           "content_right": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
           "button_right": "En savoir plus",
-          "url_right": "",
           "picto": "shopify:\/\/shop_images\/PICTO_LAB.png"
         }
       },
@@ -457,9 +451,7 @@
           "subheading": "Vivre une experience de bienêtre holistique autour des propriétés du riz",
           "title": "ORYZALIFE",
           "gotham": true,
-          "picto": "",
-          "button_text": "Découvrez la rizothérapie",
-          "url": ""
+          "button_text": "Découvrez la rizothérapie"
         }
       },
       "1600207460167": {
@@ -469,11 +461,9 @@
             "type": "card",
             "settings": {
               "title": "LES ACTIFS <br>AUTOUR DU RIZ",
-              "image": "shopify:\/\/shop_images\/DSCF5644.png",
+              "image": "shopify:\/\/shop_images\/actifs.png",
               "button_text": "Découvrez l'huile de beauté",
-              "url": "",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
-              "picto": ""
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
             }
           },
           "1600207669797": {
@@ -482,9 +472,7 @@
               "title": "LA <br>RIZOTHÉRAPIE",
               "image": "shopify:\/\/shop_images\/DSCF6494.png",
               "button_text": "Découvrez l'huile de beauté",
-              "url": "",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
-              "picto": ""
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
             }
           },
           "1600207741861": {
@@ -493,7 +481,6 @@
               "title": "L'ÉQUIPE <br>SCIENTIFIQUE",
               "image": "shopify:\/\/shop_images\/DSCF6060.png",
               "button_text": "Découvrez l'huile de beauté",
-              "url": "",
               "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
               "picto": "shopify:\/\/shop_images\/PICTO_LAB_b521ff02-f4d7-4144-9a29-9016b9a22a3a.png"
             }

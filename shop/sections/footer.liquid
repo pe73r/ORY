@@ -34,7 +34,13 @@
                 {%- assign linklist = linklists[block.settings.menu] -%}
 
                 {%- if linklist != empty -%}
-                  <h2 class="Footer__Title Heading u-h6">{{ linklist.title | escape }}</h2>
+                  <div class="Footer__title_flex">
+                    {% if block.settings.picto != blank %}
+                       <img class="Footer__picto" src="{{  block.settings.picto  | img_url:'master' }}" alt="{{ block.settings.picto.alt }}">
+                    {% else %}
+                       <h2 class="Footer__Title Gotham u-h6">{{ linklist.title | escape }}</h2>
+                    {% endif %}
+                  </div>
 
                   <ul class="Linklist">
                     {%- for link in linklist.links -%}
@@ -47,7 +53,7 @@
 
               {%- when 'newsletter' -%}
                 {%- if block.settings.title != blank -%}
-                  <h2 class="Footer__Title Heading u-h6">{{ block.settings.title | escape }}</h2>
+                  <h2 class="Footer__Title__Newsletter Gotham u-h3">{{ block.settings.title | escape }}</h2>
                 {%- endif -%}
 
                 {%- if block.settings.content != blank -%}
@@ -65,10 +71,25 @@
                     {%- endif -%}
 
                     <input type="hidden" name="contact[tags]" value="newsletter">
-                    <input type="email" name="contact[email]" class="Form__Input" aria-label="{{ 'footer.newsletter.input' | t }}" placeholder="{{ 'footer.newsletter.input' | t }}" required>
-                    <button type="submit" class="Form__Submit Button Button--primary">{{ 'footer.newsletter.submit' | t }}</button>
+                    <input type="email" name="contact[email]" class="Form__Input Newsletter__Input" aria-label="{{ 'footer.newsletter.input' | t }}" placeholder="{{ 'footer.newsletter.input' | t }}" required>
+                    <button type="submit" class="Form__Submit Button Button--primary Button--newsletter">{{ 'footer.newsletter.submit' | t }}</button>
                   {%- endif -%}
                 {%- endform -%}
+                <div class="Newsletter__social">
+                  {% if block.settings.insta_picto != blank  %}
+                    <a href="{{ settings.social_instagram | replace_first: 'https://', '' | replace_first: 'http://', '' | prepend: 'https://' }}" >
+                      <img src="{{ block.settings.insta_picto | img_url:'master' }}" alt="{{ block.settings.insta_picto.alt }}">
+                    </a>
+                  {% endif %}
+                  {% if block.settings.fb_picto != blank  %}
+                    <a href="{{ settings.social_facebook | replace_first: 'https://', '' | replace_first: 'http://', '' | prepend: 'https://' }}">
+                      <img src="{{ block.settings.fb_picto | img_url:'master' }}" alt="{{ block.settings.fb_picto.alt }}">
+                    </a>
+                  {% endif %}
+                  <div>
+                    <h4 class="Gotham u-h4">{{ block.settings.follow_text }}</h4>
+                  </div>
+                </div>
             {%- endcase -%}
           </div>
         {%- endfor -%}
@@ -148,10 +169,10 @@
         </div>
       {%- endif -%}
 
-      <div class="Footer__Copyright">
+      <!-- <div class="Footer__Copyright">
         <a href="{{ routes.root_url }}" class="Footer__StoreName Heading u-h7 Link Link--secondary">© {{ shop.name }}</a>
         <p class="Footer__ThemeAuthor">{{ powered_by_link }}</p>
-      </div>
+      </div> -->
 
       {%- if section.settings.show_payment_methods -%}
         {%- capture payment_methods -%}
@@ -240,6 +261,11 @@
           "id": "menu",
           "label": "Menu",
           "info": "This menu won't show dropdown items."
+        },
+        {
+          "type": "image_picker",
+          "id": "picto",
+          "label": "Title picto"
         }
       ]
     },
@@ -263,6 +289,22 @@
           "id": "content",
           "label": "Text",
           "default": "<p>A short sentence describing what someone will receive by subscribing</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "insta_picto",
+            "label": "Instagram picto link"
+        },
+        {
+          "type": "image_picker",
+          "id": "fb_picto",
+            "label": "Facebook picto link"
+        },
+        {
+          "type": "text",
+          "id": "follow_text",
+          "label": "Follow text",
+          "default": "Suivez nous"
         }
       ]
     }
