@@ -206,10 +206,12 @@ html {
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+  padding-bottom: 0;
 }
 
 body {
   margin: 0;
+  padding-bottom: 0;
 }
 
 [hidden] {
@@ -2107,7 +2109,7 @@ body {
   width: 100%;
 }
 
-.Button--full {
+.Button--w100{
   width: 100%;
 }
 
@@ -8217,7 +8219,7 @@ $vertical-spacing-two-products-per-row  : 0px;
 
 @include av-mq('tablet-and-up') {
   .Footer {
-    padding: 75px 0 42px 0;
+    padding: 75px 0 0 0;
   }
 
   .Footer--withMargin {
@@ -9694,7 +9696,7 @@ $vertical-spacing-two-products-per-row  : 0px;
     .Product__SlideshowNav {
       margin: 10px -10px -10px -10px;
       text-align: center;
-      margin-left: -12%;
+      margin-left: -28%;
     }
 
     .Product__SlideshowNavImage {
@@ -9973,6 +9975,7 @@ $vertical-spacing-two-products-per-row  : 0px;
 
 .ProductMeta__Title {
   margin-bottom: 0;
+  line-height: 1.2;
 }
 
 .ProductMeta__PriceList {
@@ -12388,4 +12391,120 @@ $vertical-spacing-two-products-per-row  : 0px;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+}
+
+.ProductForm__Variants{
+  margin-right: 15px;
+}
+
+@include av-mq('pocket') {
+  .ProductForm__flex{
+    flex-direction: column;
+  }
+  .ProductForm__Variants{
+    margin-right: 0;
+  }
+}
+
+//// Product metafields   ////
+
+.accordion {
+  .accordion-item {
+    border-top: 1px solid currentColor;
+    button[aria-expanded='true'] {
+
+    }
+  }
+  button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+    &:hover, &:focus {
+      cursor: pointer;
+
+      &::after {
+        cursor: pointer;
+        color: $blue-oryza;
+        border: 1px solid $blue-oryza;
+      }
+    }
+    .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+    .icon {
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 22px;
+      height: 22px;
+
+      border-radius: 22px;
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 9px;
+        left: 5px;
+        width: 10px;
+        height: 2px;
+        background: currentColor;
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 5px;
+        left: 9px;
+        width: 2px;
+        height: 10px;
+        background: currentColor;
+      }
+    }
+  }
+  button[aria-expanded='true'] {
+
+    .icon {
+      &::after {
+        width: 0;
+      }
+    }
+    + .accordion-content {
+      opacity: 1;
+      max-height: 9em;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+    }
+  }
+  .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+
+  }
+}
+
+.ProductMetafield__content{
+  padding-bottom: 15px;
+}
+
+.ProductMetafields__Block{
+  h5{
+    margin-bottom: 5px;
+  }
+}
+
+.Metafield-actif{
+  color: $blue-oryza;
+  font-family: "Gotham-Medium", sans-serif;
+  font-size: $base-text-font-size - 2px;
 }

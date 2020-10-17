@@ -316,6 +316,42 @@
             </div>
           {%- endif -%}
 
+        <!-- product metafields -->
+          <div class="Product__Metafields">
+              <div class="accordion">
+                {% if product.metafields.product.actifs != blank %}
+                  <div class="accordion-item ProductMetafields__Block">
+                    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title Gotham ProductMetafields__Title">LES ACTIFS CLÉS</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                      <div class="ProductMetafield__content">
+                       {{ product.metafields.product.actifs }}
+                      </div>
+                    </div>
+                  </div>
+               {%- endif -%}
+               {% if product.metafields.product.geste  != blank %}
+                <div class="accordion-item">
+                  <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title Gotham ProductMetafields__Title">LE BON GESTE</span><span class="icon" aria-hidden="true"></span></button>
+                  <div class="accordion-content">
+                    <div class="ProductMetafield__content">
+                      {{ product.metafields.product.geste }}
+                    </div>
+                  </div>
+                </div>
+               {%- endif -%}
+               {% if product.metafields.product.ingredients  != blank %}
+                <div class="accordion-item">
+                  <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title Gotham ProductMetafields__Title">LA LISTE D'INGREDIENTS</span><span class="icon" aria-hidden="true"></span></button>
+                  <div class="accordion-content">
+                    <div class="ProductMetafield__content">
+                     {{ product.metafields.product.ingredients }}
+                    </div> 
+                  </div>
+                </div>
+               {%- endif -%}
+              </div>
+          </div>
+
           {%- if section.settings.stack_images and product_aside != blank and media_count > 0 -%}
             <div class="Product__QuickNav hidden-pocket">
               <div class="Product__QuickNavWrapper">
@@ -420,6 +456,7 @@ This is the root container for the zoom functionality. Must not be removed, as o
     </div>
   </div>
 {%- endif -%}
+
 
 {% schema %}
 {
