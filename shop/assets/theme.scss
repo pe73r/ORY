@@ -1935,7 +1935,7 @@ body {
     }
 
     .u-h4 {
-      font-size: 16px;
+      font-size: 18px;
     }
 
     .u-h5 {
@@ -8601,7 +8601,8 @@ $vertical-spacing-two-products-per-row  : 0px;
       left: 0;
       padding-bottom: 18px;
       width: 100%;
-      text-align: center;
+      text-align: left;
+
     }
 
     /* Ugly hack !! */
@@ -8792,7 +8793,7 @@ $vertical-spacing-two-products-per-row  : 0px;
 
 .MegaMenu__Inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   flex-wrap: nowrap;
   max-width: 1450px;
@@ -8817,7 +8818,7 @@ $vertical-spacing-two-products-per-row  : 0px;
 }
 
 .MegaMenu__Item {
-  margin: 20px 40px;
+  margin: 20px 0;
   flex-shrink: 1;
 }
 
@@ -8827,7 +8828,7 @@ $vertical-spacing-two-products-per-row  : 0px;
 
 .MegaMenu__Title {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .MegaMenu__Push {
@@ -8850,13 +8851,16 @@ $vertical-spacing-two-products-per-row  : 0px;
 }
 
 .MegaMenu__PushImageWrapper {
-  margin: 8px auto 20px auto;
+  // margin: 8px auto 20px auto;
+  margin: 0;
   max-width: 100%;
   overflow: hidden;
 }
 
 .MegaMenu__PushHeading {
-  margin-bottom: 6px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: left;
 }
 
 @media (-moz-touch-enabled: 0), (hover: hover) {
@@ -12507,4 +12511,54 @@ $vertical-spacing-two-products-per-row  : 0px;
   color: $blue-oryza;
   font-family: "Gotham-Medium", sans-serif;
   font-size: $base-text-font-size - 2px;
+}
+
+
+///// mega menu //////
+
+.MegaMenu__Item--menu{
+  width: 20%;
+}
+
+.MegaMenu__Item--images{
+  width: 70%;
+}
+
+.HorizontalList--spacingExtraLoose{
+  .MainNav__menu{
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+}
+
+///// mega menu images //////
+
+.Megamenu__images{
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  div:not(:last-child){
+    margin-right: 25px;
+  }
+  h4{
+    margin-top: 10px;
+  }
+}
+
+.Megamenu__image{
+  max-width: 300px; 
+  text-align: left;
+}
+
+.Megamenu__images_link{
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+  text-align: right;
+    a{
+       color: $blue-oryza;
+     }
 }

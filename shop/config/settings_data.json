@@ -85,15 +85,48 @@
           "home_page_only": false,
           "background": "#135eab",
           "text_color": "#ffffff",
-          "content": "ORYZA LAB ANNOUNCEENT BAR"
+          "content": "LIVRAISON OFFERTE A PARTIR DE 50€ DE COMMANDE"
         }
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "d2089eed-2f11-4db3-9351-be97607909b2": {
+            "type": "mega_menu",
+            "settings": {
+              "navigation_mega_menu": "les produits",
+              "push_1_image": "shopify:\/\/shop_images\/Capture_d_ecran_2020-10-19_a_11.24.58.png",
+              "push_1_heading": "Découvrir notre huile de beauté",
+              "push_1_subheading": "",
+              "push_2_image": "shopify:\/\/shop_images\/megamenu_2.png",
+              "push_2_heading": "Découvrir notre lotion",
+              "push_2_subheading": ""
+            }
+          },
+          "95f738c6-1ab8-4b38-9080-472db7e9afa7": {
+            "type": "images",
+            "settings": {
+              "navigation_mega_menu": "oryza life",
+              "image-1": "shopify:\/\/shop_images\/images-1.png",
+              "title-1": "Les secrets de Compota",
+              "image-2": "shopify:\/\/shop_images\/images-2.png",
+              "title-2": "Découvrir notre lotion",
+              "image-3": "shopify:\/\/shop_images\/images-3.png",
+              "title-3": "Comment prendre soin de soi ?",
+              "image-4": "shopify:\/\/shop_images\/image-4.png",
+              "title-4": "Comment prendre soin de soi ?",
+              "all_products_link": "DÉCOUVRIR TOUS LES ARTICLES  >"
+            }
+          }
+        },
+        "block_order": [
+          "d2089eed-2f11-4db3-9351-be97607909b2",
+          "95f738c6-1ab8-4b38-9080-472db7e9afa7"
+        ],
         "settings": {
           "use_sticky_header": false,
           "logo": "shopify:\/\/shop_images\/LOGO.png",
-          "logo_max_width": 200,
+          "logo_max_width": 300,
           "mobile_logo_max_width": 90,
           "show_currency_selector": false,
           "show_locale_selector": false,
