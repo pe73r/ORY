@@ -8348,7 +8348,7 @@ $vertical-spacing-two-products-per-row  : 0px;
 .Header {
   background: $header-background;
   color: $header-heading-color;
-  box-shadow: 0 -1px $header-border-color inset;
+  // box-shadow: 0 -1px $header-border-color inset;
   transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -8616,8 +8616,8 @@ $vertical-spacing-two-products-per-row  : 0px;
     opacity: 0;
     transform: scale(0, 1);
     transform-origin: left center;
-    border-bottom: 2px solid $header-heading-color;
-    transition: transform 0.3s, opacity 0.3s;
+    // border-bottom: 2px solid $header-heading-color;
+    // transition: transform 0.3s, opacity 0.3s;
   }
 }
 
@@ -8743,8 +8743,8 @@ $vertical-spacing-two-products-per-row  : 0px;
   overscroll-behavior: contain;
   text-align: left;
   background: $header-background;
-  border-bottom: 1px solid $header-border-color;
-  transition: all 0.3s ease-in-out;
+  border-bottom: 5px solid $blue-oryza;
+  // transition: all 0.3s ease-in-out;
 
   @supports (--css: variables) {
     max-height: calc(100vh - var(--header-height));
@@ -12491,8 +12491,8 @@ $vertical-spacing-two-products-per-row  : 0px;
 
 .HorizontalList--spacingExtraLoose{
   .MainNav__menu{
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 30px;
+    margin-left: 30px;
   }
 }
 
@@ -12514,16 +12514,102 @@ $vertical-spacing-two-products-per-row  : 0px;
 }
 
 .Megamenu__image{
-  max-width: 300px; 
+  max-width: 300px;
   text-align: left;
 }
 
 .Megamenu__images_link{
   position: absolute;
-  right: 0;
+  right: 2%;
   bottom: -25px;
   text-align: right;
     a{
        color: $blue-oryza;
      }
+}
+
+///// Header icons //////
+
+.Header__Icons{
+   .Header__Icon{
+     position: absolute;
+     top: 45px;
+   }
+
+   .Icon__cart{
+     img{
+       max-width: 35px;
+     }
+   }
+
+   .Icon__search{
+     right: 50px;
+     img{
+       max-width: 27px;
+     }
+   }
+
+   .Icon__account{
+     right: 90px;
+     img{
+       max-width: 32px;
+     }
+   }
+
+   .Icon__stars{
+     right: 136px;
+     img{
+       max-width: 34px;
+     }
+   }
+}
+
+@include av-mq('pocket-max') {
+  .Header__Icons{
+     .Header__Icon{
+       position: relative;
+       top: 0;
+     }
+
+     .Icon__cart{
+       img{
+         max-width: 25px;
+       }
+     }
+
+     .Icon__search{
+       right: 0;
+       img{
+         max-width: 25px;
+       }
+     }
+
+     .Icon__account{
+       right: 0;
+       img{
+         max-width: 25px;
+       }
+     }
+
+     .Icon__stars{
+       right: 0;
+       img{
+         max-width: 25px;
+       }
+     }
+
+    .Header__Icon+.Header__Icon {
+       margin-left: 15px;
+    }
+  }
+}
+
+@include av-mq('pocket') {
+  .Header__Icons{
+     .Icon__search{
+       img{
+         max-width: 20px;
+       }
+     }
+  } 
 }

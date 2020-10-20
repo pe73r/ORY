@@ -133,6 +133,8 @@
           "navigation_menu": "main-menu",
           "navigation_style": "center",
           "show_icons": true,
+          "star_icon": true,
+          "star_icon_url": "shopify:\/\/pages\/faq",
           "enable_transparent_header": false,
           "enable_transparent_header_collection": false,
           "show_transparent_header_border": false,
